@@ -24021,7 +24021,7 @@ async function $73b874f14e970995$var$install(options) {
     console.log(`Downloading and extracting '${url}'...`);
     const archive = await $e2d7a47000ccff78$exports.downloadTool(url, "", options.auth ?? undefined);
     let exit;
-    if (os === "win32") exit = await $f2fb9ed99c4d106b$exports.exec("C:\\Program Files\\7-Zip\\7z.exe", [
+    if (os === "win32") exit = await $f2fb9ed99c4d106b$exports.exec('"C:\\Program Files\\7-Zip\\7z.exe"', [
         "x",
         archive,
         `-o${options.directory}`,
